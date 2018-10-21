@@ -12,7 +12,7 @@ cloudsearch_endpoint = "https://search-tweets-b4d26kjdlcfqt53fkw4afyzjde.us-east
 client = boto3.client('cloudsearchdomain', region_name='us-east-1', endpoint_url=cloudsearch_endpoint)
 
 @app.route('/search', cors=True)
-def index():
+def search():
     query = app.current_request.query_params.get("query", "")
     start = int(app.current_request.query_params.get('start', 0))
     size = int(app.current_request.query_params.get('size', 100))

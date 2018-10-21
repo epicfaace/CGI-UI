@@ -1,24 +1,20 @@
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
 <script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
-<script>
-$(document).ready(function() {
-  $("form").submit(function(e) {
-  e.preventDefault();
-  $("#button").val("Loading...");
-  var query = $("#field").val();
-  	$.ajax({url: "https://0x118xhybj.execute-api.us-east-1.amazonaws.com/prod?q=" + query, method: 'GET', contentType: 'application/json', responseType: 'application/json'}).then(function(e) {
-    console.log(e);
-    $(".results").text(e);
-    $("#button").val("Submit");
-    })
-  })
-});
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
 
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 
-<label for="search_field">Address</label>
+<label for="search_field">Search</label>
 <form>
 
 <input type='text' class='address_field' id="field" />
@@ -26,4 +22,7 @@ $(document).ready(function() {
 </form>
 <div class="results">
 
+</div>
+<div id="jsGrid">
+  
 </div>
